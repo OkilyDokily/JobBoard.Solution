@@ -1,0 +1,39 @@
+@using JobBoard.Models
+
+<head>
+    <link rel="stylesheet" href="~/css/bootstrap.css">
+    <link rel="stylesheet" href="~/css/styles.css">
+</head>
+
+
+@if(Model.Count == 0)
+{
+    <p>We don't have any Job Listings yet.</p>
+}
+else
+{
+    <div class="jumbotron"><h1>Job Board</h1></div>
+   
+    <div class="container">
+    <a href='/JobBoardPost/new'>Add your own Job Listing</a>
+    <h1>Welcome to our job listings</h1>
+    @foreach (JobBoardPost item in Model)
+    {
+    <div class="box">
+        <div class="posting">
+            <p>@("Job: "+ item.Title)</p>
+            <p class="description">@item.Description</p>
+        </div>
+        <div class="contact">
+            <p class="bold">Contact Info</p>
+            <p>@item.ContactInfo.Name</p>
+            <p>@item.ContactInfo.Email</p>
+            <p>@item.ContactInfo.PhoneNumber</p>
+        </div>  
+    </div>
+    }
+    </div>   
+}
+
+
+

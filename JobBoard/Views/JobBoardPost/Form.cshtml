@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="~/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+  <title>Job Board</title>
+</head>
+<body>
+  <div class="jumbotron"><h1>Job Board</h1></div>
+<div class="container">
+  <form action="/JobBoardPost/new" method="post">
+  <h1>Job</h1>
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="desciption">Description</label>
+    <textarea name="description" id="description" class="form-control" rows="4" cols="50"></textarea>
+  </div> 
+  <h1>Contact Info</h1>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" name="Name" id="name" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" class="form-control">
+  </div> 
+  <div class="form-group">
+    <label for="phone">Phone Number</label>
+    <input type="text" name="phone" id="phone" class="form-control">
+  </div>  
+  <button type="submit">Go!</button>
+</form>
+</div>
+</body>
+</html>
+
+
+
+
+
+
